@@ -2,6 +2,7 @@
     font-family: Inter;
     src: url("../../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
 }
+
 .pagehero{
     margin: auto;
     margin-left: 2rem;
@@ -76,34 +77,9 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1250px) {
-    .menuIcon {
-        display: flex;
-    }
-
-    .menu-start {
-        overflow: scroll;
-        width: 100%;
-    }
-    .menu-start::-webkit-scrollbar {
-        display: none;
-    }
-
-    .menu-start {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-}
-
-@font-face {
-    font-family: Inter;
-    src: url("../../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
-}
-
 .header {
     display: flex;
     flex-direction: row;
-    /* background-color: aqua; */
     margin: auto;
     justify-content: space-between;
     padding: 1rem 0rem;
@@ -115,10 +91,8 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
     font-size: 4rem;
     letter-spacing: 0rem;
-    /* background-color: yellowgreen; */
     color: #2e8bff;
 }
 
@@ -128,17 +102,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     padding: 0rem 2rem;
     margin: 1rem 1.5rem;
-
     color: #6f7378;
     font-size: 1rem;
-
     border: 1px solid #4f5053;
     border-radius: 300px;
     white-space: nowrap;
-    /* background-color: thistle; */
     min-width: 350px;
 }
 
@@ -153,11 +123,30 @@
     .head-start {
         display: none;
     }
-
     .head-end {
-        /* background-color:tomato; */
         width: 100%;
         min-width: 0px;
     }
+    .menu-end{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1250px) {
+    .menuIcon {
+        display: flex;
+    }
 
+    .menu-start {
+        overflow: scroll;
+        width: 100%;
+    }
+
+    .menu-start::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu-start {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
