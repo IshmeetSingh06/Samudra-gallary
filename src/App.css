@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	overflow: -moz-scrollbars-vertical;
+	background-color: #1e1e1e;
+	/* color: #b7bec7; */
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.App {
+	padding: 1rem 2rem;
+}

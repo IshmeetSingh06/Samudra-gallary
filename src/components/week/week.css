@@ -1,0 +1,34 @@
+.week {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: auto;
+	padding: 1rem 0rem;
+	max-width: 1500px;
+}
+
+.weekHeading {
+	color: #2e8bff;
+	font-size: 3.5rem;
+	white-space: nowrap;
+}
+
+.weekDate {
+	color: #6f7378;
+	padding: 1rem 0rem;
+	white-space: nowrap;
+}
+
+.images {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+@media only screen and (max-width: 1200px) {
+	.week {
+		flex-direction: column;
+	}
+}

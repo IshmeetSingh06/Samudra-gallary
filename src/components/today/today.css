@@ -1,0 +1,35 @@
+.today {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: auto;
+	padding: 1rem 0rem;
+	max-width: 1500px;
+}
+
+.todayHeading {
+	color: #2e8bff;
+	font-size: 3.5rem;
+	letter-spacing: 0rem;
+}
+
+.todayDate {
+	color: #6f7378;
+	padding: 1rem 0rem;
+	white-space: nowrap;
+}
+
+.images {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: flex-start;
+}
+
+@media only screen and (max-width: 1200px) {
+	.today {
+		flex-direction: column;
+	}
+}

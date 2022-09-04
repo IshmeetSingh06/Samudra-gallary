@@ -1,0 +1,42 @@
+.image-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+.image-icon-fav{
+	cursor: pointer;
+	color: #EC6A5E;
+	background-color: transparent !important;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.image-icon-nofav{
+	cursor: pointer;
+	color: #FFFFFF;
+	background-color: transparent !important;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.pic {
+	border-radius: 10px;
+}
+
+.text {
+    line-height: 3rem;
+	color: #B7BEC7;
+}
+
+@media only screen and (max-width: 500px) {
+	.image-container {
+		flex-direction: column;
+		justify-content: center;
+		margin: auto 1rem;
+	}
+}
