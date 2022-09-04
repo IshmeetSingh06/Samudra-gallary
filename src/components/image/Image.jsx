@@ -8,28 +8,28 @@ const Image = (props) => {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
   const [fileName, setFileName] = useState("");
-  
-  const getDimentions = async () => {
-    try {
-      const { width, height } = await reactImageSize(props.img.src);
-      const fullname = props.img.src;
-      const filenameArr = fullname.split("/");
-      const fullFileName = filenameArr[3].split(".");
-      setFileName(fullFileName[0] + "." + fullFileName[2]);
-      setWidth(width);
-      setHeight(height);
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const changeColor = () => {
     setFav(!fav);
   };
 
   useEffect(() => {
+    const getDimentions = async () => {
+      try {
+        const { width, height } = await reactImageSize(props.img.src);
+        const fullname = props.img.src;
+        const filenameArr = fullname.split("/");
+        const fullFileName = filenameArr[3].split(".");
+        setFileName(fullFileName[0] + "." + fullFileName[2]);
+        setWidth(width);
+        setHeight(height);
+      } catch (err) {
+        console.log(err);
+      }
+    };
     getDimentions();
-  },[]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="image-container">
@@ -40,7 +40,6 @@ const Image = (props) => {
       )}
       <img
         src={props.img.src}
-
         alt="alt"
         height={height / 25}
         width={width / 25}

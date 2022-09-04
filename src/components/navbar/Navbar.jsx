@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css";
 import { TbSettings, TbBell, TbCirclePlus } from "react-icons/tb";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -23,6 +24,7 @@ const Navbar = () => {
         <div className="dropdown">
           <button className="dropbtn">
             <span>Timeline</span>
+            <MdOutlineKeyboardArrowDown className="nav-icon" />
           </button>
           <div className="dropdown-content">
             <Link to="/">Timeline</Link>

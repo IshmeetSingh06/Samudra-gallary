@@ -5,7 +5,8 @@ import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
 const Pagehero = () => {
-  const [setScroll] = useState(0);
+  //eslint-disable-next-line
+  const [scroll, setScroll] = useState(0);
 
   const navigate = useNavigate();
   const handleClick = (e) => {
@@ -41,7 +42,9 @@ const Pagehero = () => {
         <IoIosArrowDropleft className="menuIcon" onClick={moveLeft} />
         <div className="menu-start" id={`hscroll`}>
           <div className="menu-options">
-            <div className="menu-option-item activeMenu"><span onClick={handle1}>All Photos</span></div>
+            <div className="menu-option-item activeMenu">
+              <span onClick={handle1}>All Photos</span>
+            </div>
             <div className="menu-option-item" onClick={handleClick}>
               💰 Architecture
             </div>
