@@ -1,3 +1,11 @@
+@font-face {
+	font-family: corm;
+	src: url("../../fonts/Cormorant_Upright/CormorantUpright-Regular.ttf");
+}
+@font-face {
+	font-family: corm-light;
+	src: url("../../fonts/Cormorant_Upright/CormorantUpright-Light.ttf");
+}
 .week {
 	display: flex;
 	flex-direction: row;
@@ -9,12 +17,15 @@
 }
 
 .weekHeading {
+	font-family: corm;
 	color: #2e8bff;
 	font-size: 3.5rem;
+	margin-right: 1rem;
 	white-space: nowrap;
 }
 
 .weekDate {
+	font-family: corm-light;
 	color: #6f7378;
 	padding: 1rem 0rem;
 	white-space: nowrap;

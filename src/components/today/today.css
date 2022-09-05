@@ -1,3 +1,11 @@
+@font-face {
+	font-family: corm;
+	src: url("../../fonts/Cormorant_Upright/CormorantUpright-Regular.ttf");
+}
+@font-face {
+	font-family: corm-light;
+	src: url("../../fonts/Cormorant_Upright/CormorantUpright-Light.ttf");
+}
 .today {
 	display: flex;
 	flex-direction: row;
@@ -9,12 +17,15 @@
 }
 
 .todayHeading {
+	font-family: corm;
 	color: #2e8bff;
 	font-size: 3.5rem;
+	margin-right: 6.5rem;
 	letter-spacing: 0rem;
 }
 
 .todayDate {
+	font-family: corm-light;
 	color: #6f7378;
 	padding: 1rem 0rem;
 	white-space: nowrap;

@@ -2,24 +2,19 @@ import React, { useState } from "react";
 import "./pagehero.css";
 import { TbSearch } from "react-icons/tb";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Pagehero = () => {
   //eslint-disable-next-line
   const [scroll, setScroll] = useState(0);
 
   const navigate = useNavigate();
-  const handleClick = (e) => {
+  
+  const handleActive = (e) => {
     document.querySelector(".activeMenu").classList.remove("activeMenu");
     e.target.classList.add("activeMenu");
-    navigate("/architecture");
   };
-
-  const handle1 = (e) => {
-    document.querySelector(".activeMenu").classList.remove("activeMenu");
-    e.target.classList.add("activeMenu");
-    navigate("/");
-  };
+  
   const moveRight = () => {
     const el = document.getElementById(`hscroll`);
     setScroll((el.scrollLeft += 20));
@@ -42,18 +37,62 @@ const Pagehero = () => {
         <IoIosArrowDropleft className="menuIcon" onClick={moveLeft} />
         <div className="menu-start" id={`hscroll`}>
           <div className="menu-options">
-            <div className="menu-option-item activeMenu">
-              <span onClick={handle1}>All Photos</span>
-            </div>
-            <div className="menu-option-item" onClick={handleClick}>
+            <Link
+              to="/"
+              className="menu-option-item activeMenu link"
+              onClick={handleActive}
+            >
+              All Photos
+            </Link>
+            <Link
+              to="/architecture"
+              className="menu-option-item link"
+              onClick={handleActive}
+            >
               💰 Architecture
-            </div>
-            <div className="menu-option-item">🏔 Kashmir</div>
-            <div className="menu-option-item">⛵️ Seaside</div>
-            <div className="menu-option-item">🐟 Lake view</div>
-            <div className="menu-option-item">🇨🇳 China</div>
-            <div className="menu-option-item">🇮🇹 Italy</div>
-            <div className="menu-option-item">🇦🇷 Argentina</div>
+            </Link>
+            <Link
+              to="#"
+              className="menu-option-item link"
+              onClick={handleActive}
+            >
+              🏔 Kashmir
+            </Link>
+            <Link
+              to="#"
+              className="menu-option-item link"
+              onClick={handleActive}
+            >
+              ⛵️ Seaside
+            </Link>
+            <Link
+              to="#"
+              className="menu-option-item link"
+              onClick={handleActive}
+            >
+              🐟 Lake view
+            </Link>
+            <Link
+              to="#"
+              className="menu-option-item link"
+              onClick={handleActive}
+            >
+              🇮🇳 India
+            </Link>
+            <Link
+              to="#"
+              className="menu-option-item link"
+              onClick={handleActive}
+            >
+              🇮🇹 Italy
+            </Link>
+            <Link
+              to="#"
+              className="menu-option-item link"
+              onClick={handleActive}
+            >
+              🇦🇷 Argentina
+            </Link>
           </div>
         </div>
         <IoIosArrowDropright className="menuIcon" onClick={moveRight} />

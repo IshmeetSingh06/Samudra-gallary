@@ -5,7 +5,10 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-	// const [active, setActive] = useState(null);
+  const handleActive = (e) => {
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+  };
 	return (
     <div className="navbar">
       <div className="nav-start">
@@ -14,10 +17,18 @@ const Navbar = () => {
       </div>
       <div className="nav-middle">
         <ul className="mid-options">
-          <li className="mid-option-item active">Timeline</li>
-          <li className="mid-option-item">Albums</li>
-          <li className="mid-option-item">Events</li>
-          <li className="mid-option-item">Favorites</li>
+          <li className="mid-option-item active" onClick={handleActive}>
+						Timeline
+					</li>
+					<li className="mid-option-item" onClick={handleActive}>
+						Albums
+					</li>
+					<li className="mid-option-item" onClick={handleActive}>
+						Events
+					</li>
+					<li className="mid-option-item" onClick={handleActive}>
+						Favorites
+					</li>
         </ul>
       </div>
       <div className="displayMobile">

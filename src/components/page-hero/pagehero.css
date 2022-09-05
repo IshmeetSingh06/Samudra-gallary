@@ -1,12 +1,15 @@
 @font-face {
+    font-family: Corm;
+    src: url("../../fonts/Cormorant_Upright/CormorantUpright-Bold.ttf");
+}
+@font-face {
     font-family: Inter;
     src: url("../../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
 }
-
 .pagehero{
     margin: auto;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .menu {
     font-family: Inter;
@@ -88,10 +91,12 @@
 
 .head-start {
     display: flex;
+    font-family: Corm;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     font-size: 4rem;
+    font-weight: 600;
     letter-spacing: 0rem;
     color: #2e8bff;
 }
