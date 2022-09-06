@@ -8,8 +8,6 @@ const Pagehero = () => {
   //eslint-disable-next-line
   const [scroll, setScroll] = useState(0);
 
-  const navigate = useNavigate();
-  
   const handleActive = (e) => {
     document.querySelector(".activeMenu").classList.remove("activeMenu");
     e.target.classList.add("activeMenu");
