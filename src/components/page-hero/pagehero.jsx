@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./pagehero.css";
 import { TbSearch } from "react-icons/tb";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Pagehero = () => {
   //eslint-disable-next-line
